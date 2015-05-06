@@ -1,0 +1,17 @@
+1. Download cassandra: wget http://www.us.apache.org/dist/cassandra/2.1.5/apache-cassandra-2.1.5-bin.tar.gz
+
+2. Unzip and Untar it. 
+gunzip apache-cassandra-2.1.5-bin.tar.gz
+tax -xvf apache-cassandra-2.1.5-bin.tar
+
+3. Create the data directories and run the following commands to 
+mkdir -p ~/opt/cassandra/data/data
+mkdir -p ~/opt/cassandra/data/commitlog
+mkdir -p ~/opt/cassandra/data/saved_caches
+mkdir -p ~/opt/cassandra/logs
+
+4. Copy the extracted contents of cassandra  directory to ~/opt/cassandra
+cp -r cassanra-2.1.5-bin/* ~/opt/cassandra
+
+5. Run cassandra with the following commands:
+~/opt/cassandra/bin/cassandra -f

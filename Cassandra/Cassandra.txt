@@ -1,0 +1,7 @@
+Cassandra(2.1.5):
+---------
+-> NoSQL.
+-> Document oriented database. 
+-> RDBMS: Databases <- Tables <- Rows | Cassandra: KeySpaces <- Tables <- Rows 
+-> Each Table must have a Primary key and this Primary key is also known as ROW Key or Partition Key. 
+-> 
