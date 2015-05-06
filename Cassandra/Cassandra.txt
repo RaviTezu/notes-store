@@ -1,7 +1,13 @@
 Cassandra(2.1.5):
----------
+-----------------
 -> NoSQL.
--> Document oriented database. 
+-> Column oriented database. 
 -> RDBMS: Databases <- Tables <- Rows | Cassandra: KeySpaces <- Tables <- Rows 
 -> Each Table must have a Primary key and this Primary key is also known as ROW Key or Partition Key. 
--> 
+-> Cassandra doesn't have relations(I know it is a NoSQL db ;)) and so, this means realtional logic will be needed to be handled at the application level. This also means the we may want to denormalize the dartabase because there is no join and to avoid looking up multiple tables by running mutliple queries. 
+-> Denormalization is a process of adding redundancy in data to achieve high read performance. 
+-> Partitions are distributed across the cluster, creating effective auto-sharding. Each server holds a range of keys. So, if balanced, a cluster with more nodes will have less rows per node. 
+-> Primary key is the one which we use the find the place to store? How Cassandra do that? - Hashing - Creates a new 128 bit hashkey.
+-> Now, make some good ranges of the hashkey and using these ranges the data will be stored on to different nodes. 
+-> Replicaion factor with 3, will maintain the same data across the 3 nodes and also, there's always be a primary node for that data. 
+->  
